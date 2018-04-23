@@ -60,6 +60,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\M_HangHoa.cs" />
+    <Compile Include="Model\M_NhaCungCap.cs" />
+    <Compile Include="View\DangNhap.xaml.cs">
+      <DependentUpon>DangNhap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HangHoa.xaml.cs">
+      <DependentUpon>HangHoa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NhaCungCap.xaml.cs">
+      <DependentUpon>NhaCungCap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMenuHH.xaml.cs">
+      <DependentUpon>UCMenuHH.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMenuNCC.xaml.cs">
+      <DependentUpon>UCMenuNCC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewBack.xaml.cs">
+      <DependentUpon>ViewBack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrangChu.xaml.cs">
+      <DependentUpon>TrangChu.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +95,34 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\DangNhap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HangHoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NhaCungCap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMenuHH.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMenuNCC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewBack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TrangChu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -99,6 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\online-store-header.51d264eff63b.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

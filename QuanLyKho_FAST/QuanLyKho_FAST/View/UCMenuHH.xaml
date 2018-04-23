@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="QuanLyKho_FAST.View.UCMenuHH"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyKho_FAST.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="950">
+    <Grid>
+        <Grid Name="AreaButton"
+              Height="50" 
+              Width="950" 
+              Background="CornflowerBlue">
+            <ListView Name="lvMenu" Foreground="White">
+                <ListViewItem Name="lvItemNhaCungCap" Padding="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Width="150" IsSelected="True">
+                    <TextBlock Text="Hàng Hóa" Margin="40,4,0,0"></TextBlock>
+                </ListViewItem>
+            </ListView>
+        </Grid>
+    </Grid>
+</UserControl>

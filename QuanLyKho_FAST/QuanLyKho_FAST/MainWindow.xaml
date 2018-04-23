@@ -15,8 +15,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" Height="200px" Width="200px">
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Nguyen Dang Binh"></TextBlock>
-        </materialDesign:Card>
+        
     </Grid>
 </Window>

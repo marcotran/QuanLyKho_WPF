@@ -1,0 +1,134 @@
+﻿<Window x:Class="QuanLyKho_FAST.View.ViewBack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyKho_FAST.View"
+        mc:Ignorable="d"
+        Title="NhaCungCap" Height="700" Width="1200" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None"
+        >
+
+    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+
+        <Grid Name="GridMenu"
+              Width="250"
+              HorizontalAlignment="Left"
+              Background="Navy"
+              Grid.RowSpan="2"
+              >
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <StackPanel>
+                <Image Height="150" Source="../Source/online-store-header.51d264eff63b.png" Stretch="Fill"/>
+                <ListView Foreground="WhiteSmoke" FontSize="18">
+                    <ListViewItem Name="lvItemTrangChu" Height="45" Padding="0" Selected="lvItemTrangChu_Selected">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Home"
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Trang Chủ" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Name="lvItemHangHoa" Height="45" Padding="0" Selected="lvItemHangHoa_Selected">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Gift" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Hàng Hóa" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Name="lvItemNCC" Height="45" Padding="0" Selected="lvItemNCC_Selected" >
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Truck" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Nhà Cung Cấp" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Finance" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Bảng Kê" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Note" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Phiếu" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="NoteOutline" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Tồn Đầu Kỳ" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="NotePlus" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Nhập Xuất Tồn" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="AccountMultiple" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Về Chúng Tôi" Margin="10" ></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Name="AreaButton"
+              Height="50" 
+              VerticalAlignment="Top"
+              HorizontalAlignment="Left" 
+              Width="950" 
+              Margin="250,0,0,0" Grid.RowSpan="2"
+              Background="White"/>
+
+        <Grid Name="GridMainRight" 
+              Height="650" 
+              VerticalAlignment="Bottom"
+              HorizontalAlignment="Left" 
+              Width="950" 
+              Margin="250,0,0,0" Grid.Row="1"
+              Background="WhiteSmoke">
+
+        </Grid>
+    </Grid>
+</Window>

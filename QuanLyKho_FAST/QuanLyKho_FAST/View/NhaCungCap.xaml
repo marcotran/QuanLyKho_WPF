@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="QuanLyKho_FAST.View.NhaCungCap"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyKho_FAST.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="950"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid Background="WhiteSmoke">
+        <StackPanel>
+            <Grid Name="AreaText" Height="272" VerticalAlignment="Top">
+                <TextBlock Text="Mã:" FontSize="15" Margin="34,45,0,0" HorizontalAlignment="Left" Width="40" Height="20" VerticalAlignment="Top"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+                <TextBlock Text="Điện thoại:" Width="80" Height="20" FontSize="15" Margin="512,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Địa chỉ:" Width="60" Height="20" FontSize="15" Margin="34,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Tên:" Width="70" Height="20" FontSize="15" Margin="34,104,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Email:" Width="40" Height="20" FontSize="15" Margin="512,104,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Fax:" Width="40" Height="20" FontSize="15" Margin="512,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Mã số thuế:" Width="80" Height="20" FontSize="15" Margin="34,214,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Số tài khoản:" Width="90" Height="20" FontSize="15" Margin="512,218,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
+                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+
+
+            </Grid>
+
+            <Grid Height="60" Background="White">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox 
+                        BorderBrush="LightGray" 
+                        BorderThickness="0.6" 
+                        TextWrapping="Wrap"
+                        FontSize="13"
+                        Height="24" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10,0,0,0"
+                        Width="200"
+                        materialDesign:HintAssist.Hint="Tên cần tìm"/>
+                    <Button 
+                        HorizontalAlignment="Left" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45">
+                        <materialDesign:PackIcon Kind="SearchWeb"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        HorizontalAlignment="Right" 
+                        Margin="500,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45">
+                        <materialDesign:PackIcon Kind="Plus"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        HorizontalAlignment="Right" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45">
+                        <materialDesign:PackIcon Kind="ContentSave"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        HorizontalAlignment="Right" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45">
+                        <materialDesign:PackIcon Kind="Delete"></materialDesign:PackIcon>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid>
+                <ListView Name="lvNhaCungCap"
+                      HorizontalAlignment="Left" 
+                      Width="950" Height="318" BorderBrush="#89381818" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn 
+                            DisplayMemberBinding="{Binding ID}"
+                            Header="ID" 
+                            Width="70"/>
+                            <GridViewColumn 
+                            DisplayMemberBinding="{Binding Ten}"
+                            Width="140"
+                            Header="Tên" />
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding DiaChi}"
+                            Header="Địa chỉ" 
+                            Width="140"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding DienThoai}"
+                            Header="Điện thoại"
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding Email}"
+                            Header="Email"
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding Fax}"
+                            Header="Fax" 
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding MaSoThue}"
+                            Header="Mã số thuế" 
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding SoTaiKhoan}"
+                            Header="Số tài khoản" 
+                            Width="120"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
