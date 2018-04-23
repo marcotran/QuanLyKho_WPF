@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using QuanLyKho_FAST.Model;
 
 namespace QuanLyKho_FAST.View
 {
@@ -20,46 +21,29 @@ namespace QuanLyKho_FAST.View
     /// </summary>
     public partial class NhaCungCap : UserControl
     {
-        public class User
-        {
-            public string ID { get; set; }
-            public string Ten { set; get; }
-            public string DiaChi { set; get; }
-            public string DienThoai { set; get; }
-            public string Email { set; get; }
-            public string Fax { set; get; }
-            public string MaSoThue { set; get; }
-            public string SoTaiKhoan { set; get; }
-        }
+
         public NhaCungCap()
         {
             InitializeComponent();
-            NapDuLieu();
+            LoadDuLieu();
         }
 
-        private void NapDuLieu()
+        #region methods
+
+        private void LoadDuLieu()
         {
 
-            List<User> list = new List<User>();
-            lvNhaCungCap.ItemsSource = null;
-
-            for (int i = 0; i < 10; i++)
-            {
-                list.Add(new User()
-                {
-                    ID = (i + 1).ToString(),
-                    Ten = "FPT",
-                    DiaChi = "TPHCM",
-                    DienThoai = "123456789",
-                    Email = "fpt@gmail.com",
-                    Fax = "2378467",
-                    MaSoThue = "103857",
-                    SoTaiKhoan = "82756134"
-                });
-            }
-
-            lvNhaCungCap.ItemsSource = list;
+            QLKHOEntities db = new QLKHOEntities();
+            lvNhaCungCap.ItemsSource= db.NHA_CUNG_CAP.ToList();
+            
         }
 
+        #endregion
+
+        private void lvNhaCungCap_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //txtMa.Text = (lvNhaCungCap.SelectedItem as M_NhaCungCap).Ma1;
+
+        }
     }
 }

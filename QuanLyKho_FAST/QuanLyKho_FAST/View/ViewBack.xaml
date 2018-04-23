@@ -17,14 +17,7 @@
               Background="Navy"
               Grid.RowSpan="2"
               >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
+
             <StackPanel>
                 <Image Height="150" Source="../Source/online-store-header.51d264eff63b.png" Stretch="Fill"/>
                 <ListView Foreground="WhiteSmoke" FontSize="18">
@@ -108,6 +101,16 @@
                             <TextBlock Text="Về Chúng Tôi" Margin="10" ></TextBlock>
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem Name="lvItemThoat" Height="45" Padding="0" Selected="lvItemThoat_Selected">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="ExitToApp" 
+                                                     Margin="5" 
+                                                     Width="20" 
+                                                     Height="20" 
+                                                     VerticalAlignment="Center"></materialDesign:PackIcon>
+                            <TextBlock Text="Thoát" Margin="10" ></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
                 </ListView>
             </StackPanel>
             
@@ -128,6 +131,7 @@
               Width="950" 
               Margin="250,0,0,0" Grid.Row="1"
               Background="WhiteSmoke">
+            
 
         </Grid>
     </Grid>

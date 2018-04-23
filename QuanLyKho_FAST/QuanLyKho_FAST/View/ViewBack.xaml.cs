@@ -69,5 +69,10 @@ namespace QuanLyKho_FAST.View
         {
             this.DragMove();
         }
+
+        private void lvItemThoat_Selected(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

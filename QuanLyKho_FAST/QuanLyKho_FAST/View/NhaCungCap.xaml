@@ -10,8 +10,8 @@
     <Grid Background="WhiteSmoke">
         <StackPanel>
             <Grid Name="AreaText" Height="272" VerticalAlignment="Top">
-                <TextBlock Text="Mã:" FontSize="15" Margin="34,45,0,0" HorizontalAlignment="Left" Width="40" Height="20" VerticalAlignment="Top"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+                <TextBlock Name="tbMA" Text="Mã:" FontSize="15" Margin="34,45,0,0" HorizontalAlignment="Left" Width="40" Height="20" VerticalAlignment="Top"/>
+                <TextBox Name="txtMa" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
                 <TextBlock Text="Điện thoại:" Width="80" Height="20" FontSize="15" Margin="512,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBlock Text="Địa chỉ:" Width="60" Height="20" FontSize="15" Margin="34,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                 <TextBlock Text="Tên:" Width="70" Height="20" FontSize="15" Margin="34,104,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
@@ -81,39 +81,39 @@
             <Grid>
                 <ListView Name="lvNhaCungCap"
                       HorizontalAlignment="Left" 
-                      Width="950" Height="318" BorderBrush="#89381818" >
+                      Width="950" Height="318" BorderBrush="#89381818" SelectionChanged="lvNhaCungCap_SelectionChanged" >
                     <ListView.View>
                         <GridView>
                             <GridViewColumn 
-                            DisplayMemberBinding="{Binding ID}"
+                            DisplayMemberBinding="{Binding MA_NCC}"
                             Header="ID" 
                             Width="70"/>
                             <GridViewColumn 
-                            DisplayMemberBinding="{Binding Ten}"
+                            DisplayMemberBinding="{Binding TEN_NCC}"
                             Width="140"
                             Header="Tên" />
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding DiaChi}"
+                            DisplayMemberBinding="{Binding DIACHI}"
                             Header="Địa chỉ" 
                             Width="140"/>
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding DienThoai}"
+                            DisplayMemberBinding="{Binding DIEN_THOAI}"
                             Header="Điện thoại"
                             Width="120"/>
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding Email}"
+                            DisplayMemberBinding="{Binding EMAIL}"
                             Header="Email"
                             Width="120"/>
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding Fax}"
+                            DisplayMemberBinding="{Binding FAX}"
                             Header="Fax" 
                             Width="120"/>
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding MaSoThue}"
+                            DisplayMemberBinding="{Binding MA_SO_THUE}"
                             Header="Mã số thuế" 
                             Width="120"/>
                             <GridViewColumn
-                            DisplayMemberBinding="{Binding SoTaiKhoan}"
+                            DisplayMemberBinding="{Binding SO_TAI_KHOAN}"
                             Header="Số tài khoản" 
                             Width="120"/>
                         </GridView>
