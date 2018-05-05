@@ -9,70 +9,74 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
     <Grid Background="WhiteSmoke">
         <StackPanel>
-            <Grid Name="AreaText" Height="272" VerticalAlignment="Top">
-                <TextBlock Name="tbMA" Text="Mã:" FontSize="15" Margin="34,45,0,0" HorizontalAlignment="Left" Width="40" Height="20" VerticalAlignment="Top"/>
-                <TextBox Name="txtMa" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
-                <TextBlock Text="Điện thoại:" Width="80" Height="20" FontSize="15" Margin="512,52,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBlock Text="Địa chỉ:" Width="60" Height="20" FontSize="15" Margin="34,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBlock Text="Tên:" Width="70" Height="20" FontSize="15" Margin="34,104,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBlock Text="Email:" Width="40" Height="20" FontSize="15" Margin="512,104,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBlock Text="Fax:" Width="40" Height="20" FontSize="15" Margin="512,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBlock Text="Mã số thuế:" Width="80" Height="20" FontSize="15" Margin="34,214,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBlock Text="Số tài khoản:" Width="90" Height="20" FontSize="15" Margin="512,218,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="623,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13"/>
-                <TextBox Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="23" Margin="137,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13"/>
+            <Grid Name="AreaText" Height="200" VerticalAlignment="Top" MouseLeftButtonDown="AreaText_MouseLeftButtonDown">
+                <TextBlock Text="Mã:" FontSize="15" Margin="34,20,0,0" HorizontalAlignment="Left" Width="40" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Text="Điện thoại:" Width="80" Height="20" FontSize="15" Margin="512,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Địa chỉ:" Width="60" Height="20" FontSize="15" Margin="34,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Tên:" Width="70" Height="20" FontSize="15" Margin="34,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Email:" Width="40" Height="20" FontSize="15" Margin="512,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Fax:" Width="40" Height="20" FontSize="15" Margin="512,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Mã số thuế:" Width="80" Height="20" FontSize="15" Margin="34,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Số tài khoản:" Width="90" Height="20" FontSize="15" Margin="512,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Name="txtMa" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding MA_NCC}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch" TextChanged="txtMa_TextChanged"/>
+                <TextBox Name="txtEmail" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding EMAIL}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtDiaChi" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding DIACHI}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtDienThoai" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding DIEN_THOAI}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtFax" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding FAX}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtTen" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding TEN_NCC}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtSoTaiKhoan" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding SO_TAI_KHOAN}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtMaSoThue" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding MA_SO_THUE}" VerticalContentAlignment="Stretch"/>
 
 
             </Grid>
 
-            <Grid Height="60" Background="White">
+            <Grid Height="60" Background="White" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
                 <StackPanel Orientation="Horizontal">
-                    <TextBox 
+                    <TextBox x:Name="txtTim" 
                         BorderBrush="LightGray" 
                         BorderThickness="0.6" 
                         TextWrapping="Wrap"
                         FontSize="13"
-                        Height="24" 
+                        Height="30" 
                         VerticalAlignment="Center"
                         HorizontalAlignment="Left"
                         Margin="10,0,0,0"
                         Width="200"
-                        materialDesign:HintAssist.Hint="Tên cần tìm"/>
+                        materialDesign:HintAssist.Hint="Dữ liệu cần tìm" KeyDown="txtTim_KeyDown" VerticalContentAlignment="Stretch"/>
                     <Button 
+                        Name="btnTim"
                         HorizontalAlignment="Left" 
                         Margin="10,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
-                        Width="45">
+                        Width="45" Click="btnTim_Click">
                         <materialDesign:PackIcon Kind="SearchWeb"></materialDesign:PackIcon>
                     </Button>
                     <Button 
+                        Name="btnThem"
                         HorizontalAlignment="Right" 
                         Margin="500,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
-                        Width="45">
+                        Width="45" Click="btnThem_Click">
                         <materialDesign:PackIcon Kind="Plus"></materialDesign:PackIcon>
                     </Button>
                     <Button 
+                        Name="btnLuu"
                         HorizontalAlignment="Right" 
                         Margin="10,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
-                        Width="45">
+                        Width="45" Click="btnLuu_Click">
                         <materialDesign:PackIcon Kind="ContentSave"></materialDesign:PackIcon>
                     </Button>
                     <Button 
+                        Name="btnXoa"
                         HorizontalAlignment="Right" 
                         Margin="10,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
-                        Width="45">
+                        Width="45" Click="btnXoa_Click">
                         <materialDesign:PackIcon Kind="Delete"></materialDesign:PackIcon>
                     </Button>
                 </StackPanel>
@@ -81,7 +85,12 @@
             <Grid>
                 <ListView Name="lvNhaCungCap"
                       HorizontalAlignment="Left" 
-                      Width="950" Height="318" BorderBrush="#89381818" SelectionChanged="lvNhaCungCap_SelectionChanged" >
+                      Width="950" Height="390" 
+                          BorderBrush="#89381818" 
+                          SelectionChanged="lvNhaCungCap_SelectionChanged" 
+                          ItemsSource="{Binding List}"
+                          SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}"
+                          >
                     <ListView.View>
                         <GridView>
                             <GridViewColumn 

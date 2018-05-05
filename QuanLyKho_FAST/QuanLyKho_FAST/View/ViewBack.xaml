@@ -20,7 +20,7 @@
 
             <StackPanel>
                 <Image Height="150" Source="../Source/online-store-header.51d264eff63b.png" Stretch="Fill"/>
-                <ListView Foreground="WhiteSmoke" FontSize="18">
+                <ListView Name="lvMenu" Foreground="WhiteSmoke" FontSize="18">
                     <ListViewItem Name="lvItemTrangChu" Height="45" Padding="0" Selected="lvItemTrangChu_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Home"

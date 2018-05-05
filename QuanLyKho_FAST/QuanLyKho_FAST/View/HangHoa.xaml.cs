@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace QuanLyKho_FAST.View
 {
@@ -43,7 +44,7 @@ namespace QuanLyKho_FAST.View
         {
 
             List<User> list = new List<User>();
-            lvNhaCungCap.ItemsSource = null;
+            lvHangHoa.ItemsSource = null;
 
             for (int i = 0; i < 10; i++)
             {
@@ -60,7 +61,30 @@ namespace QuanLyKho_FAST.View
                 });
             }
 
-            lvNhaCungCap.ItemsSource = list;
+            lvHangHoa.ItemsSource = list;
+        }
+
+        private void txtSoLuong_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void txtGiaXuat_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void txtGiaNhap_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void lvHangHoa_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
