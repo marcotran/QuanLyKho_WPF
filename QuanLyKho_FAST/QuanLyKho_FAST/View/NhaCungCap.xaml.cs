@@ -193,7 +193,7 @@ namespace QuanLyKho_FAST.View
         {
             lvNhaCungCap.SelectedIndex = -1;
 
-            //Khoá txtMa
+            //Enable txtMa
             txtMa.IsEnabled = true;
         }
 
