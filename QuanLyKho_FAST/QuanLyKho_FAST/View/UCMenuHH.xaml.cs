@@ -23,6 +23,18 @@ namespace QuanLyKho_FAST.View
         public UCMenuHH()
         {
             InitializeComponent();
+            HangHoa hhObj = new HangHoa();
+
+            GridMainRight.Children.Add(hhObj);
+        }
+
+        private void lvItemHH_Selected(object sender, RoutedEventArgs e)
+        {
+            GridMainRight.Children.Clear();
+
+            HangHoa hhObj = new HangHoa();
+
+            GridMainRight.Children.Add(hhObj);
         }
     }
 }

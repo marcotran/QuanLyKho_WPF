@@ -20,9 +20,6 @@ namespace QuanLyKho_FAST
             this.BANG_KE_NHAP_HANG = new HashSet<BANG_KE_NHAP_HANG>();
             this.BANG_KE_XUAT_HANG = new HashSet<BANG_KE_XUAT_HANG>();
             this.HANG_HOA = new HashSet<HANG_HOA>();
-            this.PHIEU_NHAP = new HashSet<PHIEU_NHAP>();
-            this.PHIEU_XUAT_KHO = new HashSet<PHIEU_XUAT_KHO>();
-            this.PHIEU_XUAT = new HashSet<PHIEU_XUAT>();
         }
     
         public string MA_NCC { get; set; }
@@ -40,11 +37,5 @@ namespace QuanLyKho_FAST
         public virtual ICollection<BANG_KE_XUAT_HANG> BANG_KE_XUAT_HANG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HANG_HOA> HANG_HOA { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEU_NHAP> PHIEU_NHAP { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEU_XUAT_KHO> PHIEU_XUAT_KHO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEU_XUAT> PHIEU_XUAT { get; set; }
     }
 }

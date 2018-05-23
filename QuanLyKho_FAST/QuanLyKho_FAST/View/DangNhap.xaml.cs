@@ -26,6 +26,22 @@ namespace QuanLyKho_FAST.View
 
         private void btnAccept_Click(object sender, RoutedEventArgs e)
         {
+            using(QLKHOEntities db = new QLKHOEntities())
+            {
+                List<Tai_Khoan> t = db.Tai_Khoan.ToList();
+
+                foreach (Tai_Khoan y in t)
+                {
+                    if (txtTenDangNhap.Text.Equals(y.username.Trim()) == true && txtMatKhau.Password.Equals(y.username.Trim()) == true)
+                    {
+                        this.Hide();
+                        new ViewBack().ShowDialog();
+                        this.Close();
+                    }
+                    txtCanhBao.Visibility = Visibility.Visible;
+                }
+            }
+
             
         }
 

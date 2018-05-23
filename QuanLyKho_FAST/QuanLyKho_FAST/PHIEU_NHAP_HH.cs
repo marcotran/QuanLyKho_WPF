@@ -12,13 +12,15 @@ namespace QuanLyKho_FAST
     using System;
     using System.Collections.Generic;
     
-    public partial class KHO
+    public partial class PHIEU_NHAP_HH
     {
-        public string MA_KHO { get; set; }
-        public string TEN_KHO { get; set; }
-        public string DIA_CHI { get; set; }
-        public string TRUONG_KHO { get; set; }
-    
-        public virtual NHAN_VIEN NHAN_VIEN { get; set; }
+        public int SOCHUNGTU { get; set; }
+        public Nullable<System.DateTime> NGAYNHAP { get; set; }
+        public string MANCC { get; set; }
+        public string MAHH { get; set; }
+        public Nullable<int> SOLUONG { get; set; }
+        public Nullable<int> GIA { get; set; }
+        public Nullable<int> TIEN { get; set; }
+        public string DIENGIAI { get; set; }
     }
 }

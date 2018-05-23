@@ -28,14 +28,11 @@ namespace QuanLyKho_FAST
         public virtual DbSet<BANG_KE_NHAP_HANG> BANG_KE_NHAP_HANG { get; set; }
         public virtual DbSet<BANG_KE_XUAT_HANG> BANG_KE_XUAT_HANG { get; set; }
         public virtual DbSet<HANG_HOA> HANG_HOA { get; set; }
-        public virtual DbSet<KHO> KHOes { get; set; }
         public virtual DbSet<NHA_CUNG_CAP> NHA_CUNG_CAP { get; set; }
         public virtual DbSet<NHAN_VIEN> NHAN_VIEN { get; set; }
-        public virtual DbSet<NHAP_XUAT_TON> NHAP_XUAT_TON { get; set; }
-        public virtual DbSet<PHIEU_NHAP> PHIEU_NHAP { get; set; }
-        public virtual DbSet<PHIEU_XUAT> PHIEU_XUAT { get; set; }
-        public virtual DbSet<PHIEU_XUAT_KHO> PHIEU_XUAT_KHO { get; set; }
+        public virtual DbSet<PHIEU_NHAP_HH> PHIEU_NHAP_HH { get; set; }
+        public virtual DbSet<PHIEU_XUAT_HH> PHIEU_XUAT_HH { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TON_DAU_KY> TON_DAU_KY { get; set; }
+        public virtual DbSet<Tai_Khoan> Tai_Khoan { get; set; }
     }
 }

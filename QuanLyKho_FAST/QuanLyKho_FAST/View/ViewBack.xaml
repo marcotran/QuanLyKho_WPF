@@ -19,6 +19,7 @@
               >
 
             <StackPanel>
+
                 <Image Height="150" Source="../Source/online-store-header.51d264eff63b.png" Stretch="Fill"/>
                 <ListView Name="lvMenu" Foreground="WhiteSmoke" FontSize="18">
                     <ListViewItem Name="lvItemTrangChu" Height="45" Padding="0" Selected="lvItemTrangChu_Selected">
@@ -61,7 +62,7 @@
                             <TextBlock Text="Bảng Kê" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
+                    <ListViewItem Name="lvItemPhieu" Height="45" Padding="0" Selected="lvItemPhieu_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Note" 
                                                      Margin="5" 
@@ -71,7 +72,7 @@
                             <TextBlock Text="Phiếu" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
+                    <ListViewItem Name="lvItemTonDauKy" Height="45" Padding="0" Selected="lvItemTonDauKy_Selected" >
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="NoteOutline" 
                                                      Margin="5" 
@@ -113,25 +114,17 @@
                     </ListViewItem>
                 </ListView>
             </StackPanel>
-            
+          
         </Grid>
 
-        <Grid Name="AreaButton"
-              Height="50" 
-              VerticalAlignment="Top"
-              HorizontalAlignment="Left" 
-              Width="950" 
-              Margin="250,0,0,0" Grid.RowSpan="2"
-              Background="White"/>
-
         <Grid Name="GridMainRight" 
-              Height="650" 
+              Height="700" 
               VerticalAlignment="Bottom"
               HorizontalAlignment="Left" 
               Width="950" 
               Margin="250,0,0,0" Grid.Row="1"
               Background="WhiteSmoke">
-            
+           
 
         </Grid>
     </Grid>

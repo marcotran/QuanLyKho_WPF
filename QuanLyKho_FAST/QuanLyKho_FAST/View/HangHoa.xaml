@@ -53,6 +53,7 @@
                         Margin="500,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
+                        Background="ForestGreen"
                         Width="45" Click="btnThem_Click">
                         <materialDesign:PackIcon Kind="Plus"></materialDesign:PackIcon>
                     </Button>
@@ -62,6 +63,7 @@
                         Margin="10,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
+                        Background="Chocolate"
                         Width="45" Click="btnLuu_Click">
                         <materialDesign:PackIcon Kind="ContentSave"></materialDesign:PackIcon>
                     </Button>
@@ -71,6 +73,7 @@
                         Margin="10,0,0,0"
                         VerticalAlignment="Center" 
                         Height="24"
+                        Background="Red"
                         Width="45" Click="btnXoa_Click">
                         <materialDesign:PackIcon Kind="Delete"></materialDesign:PackIcon>
                     </Button>

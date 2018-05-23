@@ -130,6 +130,12 @@ namespace QuanLyKho_FAST.View
             HANG_HOA temp = new HANG_HOA();
             //HANG_HOA temp = (HANG_HOA)AreaText.DataContext;
 
+
+            //kiểm tra dữ liệu nhập
+            if (CheckDataInput() == false)
+                return;
+
+
             //Gán dữ liệu 
             temp.MA_HH = txtMa.Text.Trim();
             temp.TEN_HH = txtTen.Text.Trim();
@@ -138,9 +144,6 @@ namespace QuanLyKho_FAST.View
             temp.GIA_XUAT = Int32.Parse(txtGiaXuat.Text.Trim());
             temp.SO_LUONG = Int32.Parse(txtSoLuong.Text.Trim());
 
-            //kiểm tra dữ liệu nhập
-            if (CheckDataInput() == false)
-                return;
 
             // kiểm tra mã hàng hoá
             if (CheckID() == false)

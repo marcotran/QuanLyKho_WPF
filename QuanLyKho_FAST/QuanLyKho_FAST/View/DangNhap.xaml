@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho_FAST.View"
         mc:Ignorable="d"
-        Title="Đăng Nhập" Height="700" Width="1200"
+        Title="Đăng Nhập" Height="700" Width="800"
         
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -21,7 +21,7 @@
             HorizontalAlignment="Left" 
             Height="80" 
             VerticalAlignment="Top" 
-            Width="1200"
+            Width="800"
             Background="CornflowerBlue">
             <Label Content="ĐĂNG NHẬP"
                    Margin="265,14,241,10" 
@@ -30,33 +30,33 @@
                    Foreground="White"
                    FontSize="40"/>
         </Grid>
-        <Grid Name="Main" Margin="0,80,0,0" Background="White">
+        <Grid Name="Main" Width="800" Margin="0,80,0,0" Background="White">
             <Canvas>
                 <TextBlock 
                     Style="{StaticResource MaterialDesignTitleTextBlock}" 
-                    Canvas.Left="375" 
+                    Canvas.Left="100" 
                     Canvas.Top="171"><Run Text="Tên đăng nhập:"/></TextBlock>
-                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Canvas.Left="375"
+                <TextBlock Style="{StaticResource MaterialDesignTitleTextBlock}" Canvas.Left="100"
                            Canvas.Top="238" 
                            RenderTransformOrigin="0.125,0.234"><Run Text="Mật khẩu:"/></TextBlock>
                 <TextBox 
                     Name="txtTenDangNhap"
                     materialDesign:HintAssist.Hint="Tên đăng nhập"
-                    Canvas.Left="602" 
+                    Canvas.Left="300" 
                     Canvas.Top="158" 
                     Height="40"
                     Width="266" />
                 <PasswordBox
                     x:Name="txtMatKhau"
                     materialDesign:HintAssist.Hint="Mật khẩu" 
-                    Canvas.Left="602" 
+                    Canvas.Left="300" 
                     Canvas.Top="225" Width="266" Height="40" />
                 <Button
                     Name="btnAccept"
                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
                     Width="120"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" 
-                    Canvas.Left="458"
+                    Canvas.Left="220"
                     Canvas.Top="338" 
                     Content="Đăng nhập" 
                     Click="btnAccept_Click" Background="ForestGreen"/>
@@ -65,11 +65,12 @@
                     Style="{StaticResource MaterialDesignRaisedDarkButton}"
                     Width="120"
                     ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" 
-                    Canvas.Left="681"
+                    Canvas.Left="430"
                     Canvas.Top="338"
                     Content="Hủy" 
                     Click="btnCancel_Click"
                     Background="OrangeRed"/>
+                <TextBlock Name="txtCanhBao" Canvas.Left="252" TextWrapping="Wrap" Text="Tên đăng nhập hoặc mật khẩu không đúng!" Canvas.Top="294" Foreground="#DDFF0000" FontWeight="Bold" FontStyle="Italic" Visibility="Hidden"/>
             </Canvas>
         </Grid>
     </Grid>

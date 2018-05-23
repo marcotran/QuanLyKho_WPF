@@ -12,14 +12,9 @@ namespace QuanLyKho_FAST
     using System;
     using System.Collections.Generic;
     
-    public partial class NHAP_XUAT_TON
+    public partial class Tai_Khoan
     {
-        public string MA_HH { get; set; }
-        public Nullable<int> TON_DAU { get; set; }
-        public Nullable<int> NHAP { get; set; }
-        public Nullable<int> XUAT { get; set; }
-        public Nullable<int> TON_CUOI { get; set; }
-    
-        public virtual HANG_HOA HANG_HOA { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }

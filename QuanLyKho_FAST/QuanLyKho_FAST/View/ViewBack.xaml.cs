@@ -36,19 +36,16 @@ namespace QuanLyKho_FAST.View
         private void lvItemHangHoa_Selected(object sender, RoutedEventArgs e)
         {
             GridMainRight.Children.Clear();
-            AreaButton.Children.Clear();
 
-            HangHoa hhObj = new HangHoa();
             UCMenuHH ucHH = new UCMenuHH();
 
-            AreaButton.Children.Add(ucHH);
-            GridMainRight.Children.Add(hhObj);
+            GridMainRight.Children.Add(ucHH);
         }
 
         private void lvItemTrangChu_Selected(object sender, RoutedEventArgs e)
         {
             GridMainRight.Children.Clear();
-            AreaButton.Children.Clear();
+            
             TrangChu tcObj = new TrangChu();
             GridMainRight.Children.Add(tcObj);
         }
@@ -56,13 +53,10 @@ namespace QuanLyKho_FAST.View
         private void lvItemNCC_Selected(object sender, RoutedEventArgs e)
         {
             GridMainRight.Children.Clear();
-            AreaButton.Children.Clear();
-
-            NhaCungCap nccObj = new NhaCungCap();
+            
             UCMenuNCC ucNCC = new UCMenuNCC();
 
-            AreaButton.Children.Add(ucNCC);
-            GridMainRight.Children.Add(nccObj);
+            GridMainRight.Children.Add(ucNCC);
         }
 
         private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -73,6 +67,35 @@ namespace QuanLyKho_FAST.View
         private void lvItemThoat_Selected(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void lvItemTonDauKy_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        int flag = 0;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(flag == 0)
+            {
+                GridMenu.Width = 50;
+                flag = 1;
+            }
+            else
+            {
+                GridMenu.Width = 250;
+                flag = 0;
+            }
+        }
+
+        private void lvItemPhieu_Selected(object sender, RoutedEventArgs e)
+        {
+            GridMainRight.Children.Clear();
+
+            UCPhieu ucNCC = new UCPhieu();
+
+            GridMainRight.Children.Add(ucNCC);
         }
     }
 }

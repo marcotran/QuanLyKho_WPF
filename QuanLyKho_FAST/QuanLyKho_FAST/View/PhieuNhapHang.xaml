@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="QuanLyKho_FAST.View.PhieuNhapHang"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyKho_FAST.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="950"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <Grid Background="WhiteSmoke">
+        <StackPanel>
+            <Grid Name="AreaText" Height="200" VerticalAlignment="Top" >
+                <TextBlock Text="Số chứng từ:" FontSize="15" Margin="34,20,0,0" HorizontalAlignment="Left" Width="90" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Text="Số lượng:" Width="80" Height="20" FontSize="15" Margin="512,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock Text="Mã NCC:" Width="60" Height="20" FontSize="15" Margin="34,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Mã hàng hoá:" Width="90" Height="20" FontSize="15" Margin="34,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Giá:" Width="40" Height="20" FontSize="15" Margin="512,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Diễn giải:" Width="70" Height="20" FontSize="15" Margin="512,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="Ngày nhập:" Width="80" Height="20" FontSize="15" Margin="34,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBox Name="txtSoChungTu" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding SOCHUNGTU}" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch" IsEnabled="False"/>
+                <TextBox Name="txtGia" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding GIA}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtMaNCC" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding MANCC}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtSL" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="623,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding SOLUONG}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtDienGiai" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="70" Margin="623,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="13" Text="{Binding DIENGIAI}" VerticalContentAlignment="Stretch"/>
+                <TextBox Name="txtMaHH" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding MAHH}" VerticalContentAlignment="Stretch"/>
+                <!--<TextBox Name="txtNgay" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding MA_SO_THUE}" VerticalContentAlignment="Stretch"/>-->
+                <DatePicker Name="txtNgay" Background="White" BorderBrush="LightGray" BorderThickness="0.6" HorizontalAlignment="Left" Height="30" Margin="137,140,0,0" VerticalAlignment="Top" Width="300" FontSize="13" Text="{Binding NGAYNHAP}" IsTodayHighlighted="False" />
+            </Grid>
+            <Grid Height="60" Background="White" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtTim" 
+                        BorderBrush="LightGray" 
+                        BorderThickness="0.6" 
+                        TextWrapping="Wrap"
+                        FontSize="13"
+                        Height="30" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="10,0,0,0"
+                        Width="200"
+                        materialDesign:HintAssist.Hint="Dữ liệu cần tìm" VerticalContentAlignment="Stretch"/>
+                    <Button 
+                        Name="btnTim"
+                        HorizontalAlignment="Left" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45" Click="btnTim_Click" >
+                        <materialDesign:PackIcon Kind="SearchWeb"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        Name="btnThem"
+                        HorizontalAlignment="Right" 
+                        Margin="500,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45" Click="btnThem_Click" >
+                        <materialDesign:PackIcon Kind="Plus"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        Name="btnLuu"
+                        HorizontalAlignment="Right" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45" Click="btnLuu_Click" >
+                        <materialDesign:PackIcon Kind="ContentSave"></materialDesign:PackIcon>
+                    </Button>
+                    <Button 
+                        Name="btnXoa"
+                        HorizontalAlignment="Right" 
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center" 
+                        Height="24"
+                        Width="45" Click="btnXoa_Click" >
+                        <materialDesign:PackIcon Kind="Delete"></materialDesign:PackIcon>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <ListView Name="lvNhaCungCap"
+                      HorizontalAlignment="Left" 
+                      Width="950" Height="390" 
+                          BorderBrush="#89381818"  
+                          ItemsSource="{Binding List}"
+                          SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" SelectionChanged="lvNhaCungCap_SelectionChanged"
+                          >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn 
+                            DisplayMemberBinding="{Binding SOCHUNGTU}"
+                            Header="Số chứng từ" 
+                            Width="120"/>
+                            <GridViewColumn 
+                            DisplayMemberBinding="{Binding NGAYNHAP}"
+                            Width="80"
+                            Header="Ngày " />
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding MANCC}"
+                            Header="Mã NCC" 
+                            Width="110"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding MAHH}"
+                            Header="Mã HH"
+                            Width="110"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding SOLUONG}"
+                            Header="Số lượng"
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding GIA}"
+                            Header="Giá" 
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding TIEN}"
+                            Header="Tiền" 
+                            Width="120"/>
+                            <GridViewColumn
+                            DisplayMemberBinding="{Binding DIENGIAI}"
+                            Header="Diến giải" 
+                            Width="160"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

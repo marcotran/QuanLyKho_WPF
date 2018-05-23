@@ -78,9 +78,6 @@
     <Compile Include="HANG_HOA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="KHO.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,25 +98,19 @@
     <Compile Include="NHAN_VIEN.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="NHAP_XUAT_TON.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="NHA_CUNG_CAP.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="PHIEU_NHAP.cs">
+    <Compile Include="PHIEU_NHAP_HH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="PHIEU_XUAT.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PHIEU_XUAT_KHO.cs">
+    <Compile Include="PHIEU_XUAT_HH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="TON_DAU_KY.cs">
+    <Compile Include="Tai_Khoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="View\DangNhap.xaml.cs">
@@ -131,11 +122,23 @@
     <Compile Include="View\NhaCungCap.xaml.cs">
       <DependentUpon>NhaCungCap.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PhieuNhapHang.xaml.cs">
+      <DependentUpon>PhieuNhapHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhieuXuatHang.xaml.cs">
+      <DependentUpon>PhieuXuatHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TonDauKy.xaml.cs">
+      <DependentUpon>TonDauKy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UCMenuHH.xaml.cs">
       <DependentUpon>UCMenuHH.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UCMenuNCC.xaml.cs">
       <DependentUpon>UCMenuNCC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCPhieu.xaml.cs">
+      <DependentUpon>UCPhieu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ViewBack.xaml.cs">
       <DependentUpon>ViewBack.xaml</DependentUpon>
@@ -167,11 +170,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\PhieuNhapHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PhieuXuatHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TonDauKy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\UCMenuHH.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UCMenuNCC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCPhieu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -14,12 +14,6 @@ namespace QuanLyKho_FAST
     
     public partial class NHAN_VIEN
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NHAN_VIEN()
-        {
-            this.KHOes = new HashSet<KHO>();
-        }
-    
         public string MA_NV { get; set; }
         public string TEN_NV { get; set; }
         public string CHUC_VU { get; set; }
@@ -27,8 +21,5 @@ namespace QuanLyKho_FAST
         public string DIA_CHI { get; set; }
         public string DIEN_THOAI { get; set; }
         public string EMAIL { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KHO> KHOes { get; set; }
     }
 }

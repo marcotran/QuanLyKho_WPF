@@ -16,27 +16,13 @@ using System.Windows.Shapes;
 namespace QuanLyKho_FAST.View
 {
     /// <summary>
-    /// Interaction logic for UCMenuNCC.xaml
+    /// Interaction logic for TonDauKy.xaml
     /// </summary>
-    public partial class UCMenuNCC : UserControl
+    public partial class TonDauKy : UserControl
     {
-        public UCMenuNCC()
+        public TonDauKy()
         {
             InitializeComponent();
-
-            NhaCungCap hhObj = new NhaCungCap();
-
-            GridMainRight.Children.Add(hhObj);
-        }
-
-
-        private void lvItemNhaCungCap_Selected_1(object sender, RoutedEventArgs e)
-        {
-            GridMainRight.Children.Clear();
-
-            NhaCungCap hhObj = new NhaCungCap();
-
-            GridMainRight.Children.Add(hhObj);
         }
     }
 }

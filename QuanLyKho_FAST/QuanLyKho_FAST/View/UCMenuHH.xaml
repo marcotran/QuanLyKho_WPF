@@ -5,17 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:QuanLyKho_FAST.View"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="950">
+             d:DesignHeight="700" d:DesignWidth="950">
     <Grid>
-        <Grid Name="AreaButton"
+        <StackPanel>
+            <Grid Name="AreaButton"
               Height="50" 
               Width="950" 
               Background="CornflowerBlue">
-            <ListView Name="lvMenu" Foreground="White">
-                <ListViewItem Name="lvItemNhaCungCap" Padding="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Width="150" IsSelected="True">
-                    <TextBlock Text="Hàng Hóa" Margin="40,4,0,0"></TextBlock>
-                </ListViewItem>
-            </ListView>
-        </Grid>
+                <ListView Name="lvMenu" Foreground="White">
+                    <ListViewItem Name="lvItemHH" HorizontalContentAlignment="Center" FontSize="13" Content="Hàng hoá" Padding="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="50" Width="150" Selected="lvItemHH_Selected"/>
+                </ListView>
+            </Grid>
+            <Grid Name="GridMainRight" 
+                  Height="650" 
+                  Width="950"
+                  Background="WhiteSmoke">
+            </Grid>
+        </StackPanel>
     </Grid>
 </UserControl>

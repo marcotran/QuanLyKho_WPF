@@ -5,32 +5,20 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="88489a4deecc4520ab37d64aefa7dbd3" Name="Diagram1">
-        <EntityTypeShape EntityType="QLKHOModel.BANG_KE_NHAP_HANG" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.BANG_KE_XUAT_HANG" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.HANG_HOA" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.KHO" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.NHA_CUNG_CAP" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.NHAN_VIEN" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.NHAP_XUAT_TON" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.PHIEU_NHAP" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.PHIEU_XUAT" Width="1.5" PointX="8.25" PointY="20.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.PHIEU_XUAT_KHO" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLKHOModel.TON_DAU_KY" Width="1.5" PointX="5.25" PointY="33.25" IsExpanded="true" />
-        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_NHAP_HANG_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_NHAP_HANG_NHA_CUNG_CAP" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_XUAT_HANG_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_XUAT_HANG_NHA_CUNG_CAP" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_HANGHOA_NHACUNGCAP" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_NHAP_XUAT_TON_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_NHAP_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_KHO_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_TON_DAU_KY_HANG_HOA" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_KHO_NHAN_VIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_NHAP_NHA_CUNG_CAP" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_KHO_NHA_CUNG_CAP" ManuallyRouted="false" />
-        <AssociationConnector Association="QLKHOModel.FK_PHIEU_XUAT_NHA_CUNG_CAP" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLKHOModel.BANG_KE_NHAP_HANG" Width="1.5" PointX="5.25" PointY="8.875" />
+        <EntityTypeShape EntityType="QLKHOModel.BANG_KE_XUAT_HANG" Width="1.5" PointX="8.25" PointY="8.875" />
+        <EntityTypeShape EntityType="QLKHOModel.HANG_HOA" Width="1.5" PointX="3" PointY="13" />
+        <EntityTypeShape EntityType="QLKHOModel.NHA_CUNG_CAP" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="QLKHOModel.NHAN_VIEN" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLKHOModel.PHIEU_NHAP_HH" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLKHOModel.PHIEU_XUAT_HH" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QLKHOModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" />
+        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_NHAP_HANG_HANG_HOA" />
+        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_NHAP_HANG_NHA_CUNG_CAP" />
+        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_XUAT_HANG_HANG_HOA" />
+        <AssociationConnector Association="QLKHOModel.FK_BANG_KE_XUAT_HANG_NHA_CUNG_CAP" />
+        <AssociationConnector Association="QLKHOModel.FK_HANGHOA_NHACUNGCAP" />
+        <EntityTypeShape EntityType="QLKHOModel.Tai_Khoan" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

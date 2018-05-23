@@ -16,25 +16,36 @@ using System.Windows.Shapes;
 namespace QuanLyKho_FAST.View
 {
     /// <summary>
-    /// Interaction logic for UCMenuNCC.xaml
+    /// Interaction logic for UCPhieu.xaml
     /// </summary>
-    public partial class UCMenuNCC : UserControl
+    public partial class UCPhieu : UserControl
     {
-        public UCMenuNCC()
+        public UCPhieu()
         {
             InitializeComponent();
+            
+        }
 
-            NhaCungCap hhObj = new NhaCungCap();
+        private void btnPN_Click(object sender, RoutedEventArgs e)
+        {
+            btnPN.Background = Brushes.ForestGreen;
+            btnPX.Background = Brushes.Transparent;
+
+            GridMainRight.Children.Clear();
+
+            PhieuNhapHang hhObj = new PhieuNhapHang();
 
             GridMainRight.Children.Add(hhObj);
         }
 
-
-        private void lvItemNhaCungCap_Selected_1(object sender, RoutedEventArgs e)
+        private void btnPX_Click(object sender, RoutedEventArgs e)
         {
+            btnPN.Background = Brushes.Transparent;
+            btnPX.Background = Brushes.ForestGreen;
+
             GridMainRight.Children.Clear();
 
-            NhaCungCap hhObj = new NhaCungCap();
+            PhieuXuatHang hhObj = new PhieuXuatHang();
 
             GridMainRight.Children.Add(hhObj);
         }
