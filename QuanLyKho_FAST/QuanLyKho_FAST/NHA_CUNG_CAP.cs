@@ -19,7 +19,7 @@ namespace QuanLyKho_FAST
         {
             this.BANG_KE_NHAP_HANG = new HashSet<BANG_KE_NHAP_HANG>();
             this.BANG_KE_XUAT_HANG = new HashSet<BANG_KE_XUAT_HANG>();
-            this.HANG_HOA = new HashSet<HANG_HOA>();
+            this.HANG_HOA = new HashSet<HANG_HOA>()
         }
     
         public string MA_NCC { get; set; }
